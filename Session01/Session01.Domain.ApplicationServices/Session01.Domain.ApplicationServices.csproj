@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Session01.Domain.Contracts\Session01.Domain.Contracts.csproj" />
+    <ProjectReference Include="..\Session01.Domain.Entities\Session01.Domain.Entities.csproj" />
+    <ProjectReference Include="..\Session01.Domain.Services\Session01.Domain.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Customers\Command\" />
+  </ItemGroup>
+
+</Project>

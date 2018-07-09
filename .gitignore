@@ -1,0 +1,17 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Session01/Session01.Data.EF/bin
+/Session01/.vs
+/Session01/Session01.Data.EF/obj
+/Session01/Session01.Domain.ApplicationServices/bin
+/Session01/Session01.Domain.ApplicationServices/obj
+/Session01/Session01.Domain.Contracts/bin
+/Session01/Session01.Domain.Contracts/obj
+/Session01/Session01.Domain.Entities/bin
+/Session01/Session01.Domain.Entities/obj
+/Session01/Session01.Domain.Services/bin
+/Session01/Session01.Domain.Services/obj
+/Session01/Session01.EndPoint.WebUI/bin
+/Session01/Session01.EndPoint.WebUI/obj

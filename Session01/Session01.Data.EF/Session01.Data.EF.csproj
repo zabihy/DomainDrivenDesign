@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Session01.Domain.Contracts\Session01.Domain.Contracts.csproj" />
+    <ProjectReference Include="..\Session01.Domain.Entities\Session01.Domain.Entities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Goods\" />
+    <Folder Include="Orders\" />
+    <Folder Include="Salesmans\" />
+  </ItemGroup>
+
+</Project>
