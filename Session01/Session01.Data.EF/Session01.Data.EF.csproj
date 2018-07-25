@@ -14,10 +14,4 @@
     <ProjectReference Include="..\Session01.Domain.Entities\Session01.Domain.Entities.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Goods\" />
-    <Folder Include="Orders\" />
-    <Folder Include="Salesmans\" />
-  </ItemGroup>
-
 </Project>

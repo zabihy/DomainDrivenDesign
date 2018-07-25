@@ -53,6 +53,9 @@ namespace Session01.Domain.Entities.Orders
             }
         }
 
+        public long GoodId { get; set; }
+        public long CustomerId { get; set; }
+        public long SalesmanId { get; set; }
 
         private void updateTotalPrice()
         {

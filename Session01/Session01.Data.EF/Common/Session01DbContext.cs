@@ -11,6 +11,10 @@ namespace Session01.Data.EF.Common
 {
     public class Session01DbContext:DbContext
     {
+        public Session01DbContext(DbContextOptions<Session01DbContext> options):base(options)
+        {
+
+        }
         public DbSet<Salesman> SalesMen { get; set; }
         public DbSet<Order> Orders{ get; set; }
         public DbSet<Customer> Customers{ get; set; }

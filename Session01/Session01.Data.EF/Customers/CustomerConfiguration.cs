@@ -5,11 +5,11 @@ using System;
 
 namespace Session01.Data.EF.Customers
 {
-    public class CostomerConfig : IEntityTypeConfiguration<Customer>
+    public class CustomerConfiguration : IEntityTypeConfiguration<Customer>
     {
         public void Configure(EntityTypeBuilder<Customer> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(c => c.CustomerId);
         }
     }
 }

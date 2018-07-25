@@ -15,3 +15,4 @@
 /Session01/Session01.Domain.Services/obj
 /Session01/Session01.EndPoint.WebUI/bin
 /Session01/Session01.EndPoint.WebUI/obj
+*.user
