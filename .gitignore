@@ -16,3 +16,6 @@
 /Session01/Session01.EndPoint.WebUI/bin
 /Session01/Session01.EndPoint.WebUI/obj
 *.user
+/Session02/Discount/Discount/obj
+/Session02/Discount/Discount/bin/Debug/netcoreapp2.1
+/Session02/Discount/.vs/Discount/v15
