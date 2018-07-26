@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Session01.Domain.Contracts.Goods
 {
-    interface IGoodRepository
+    public interface IGoodRepository
     {
         List<Good> Goods();
     }

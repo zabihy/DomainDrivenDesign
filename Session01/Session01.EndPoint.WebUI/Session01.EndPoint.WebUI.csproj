@@ -16,4 +16,8 @@
     <ProjectReference Include="..\Session01.Domain.Services\Session01.Domain.Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Customer\" />
+  </ItemGroup>
+
 </Project>
