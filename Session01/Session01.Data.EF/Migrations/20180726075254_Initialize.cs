@@ -54,53 +54,50 @@ namespace Session01.Data.EF.Migrations
                 {
                     OrderId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    GoodId1 = table.Column<int>(nullable: true),
-                    SalesmanId1 = table.Column<int>(nullable: true),
-                    CustomerId1 = table.Column<int>(nullable: true),
                     Quantity = table.Column<int>(nullable: false),
                     Price = table.Column<int>(nullable: false),
                     TotalPrice = table.Column<int>(nullable: false),
-                    GoodId = table.Column<long>(nullable: false),
-                    CustomerId = table.Column<long>(nullable: false),
-                    SalesmanId = table.Column<long>(nullable: false)
+                    GoodId = table.Column<int>(nullable: false),
+                    CustomerId = table.Column<int>(nullable: false),
+                    SalesmanId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Orders", x => x.OrderId);
                     table.ForeignKey(
-                        name: "FK_Orders_Customers_CustomerId1",
-                        column: x => x.CustomerId1,
+                        name: "FK_Orders_Customers_CustomerId",
+                        column: x => x.CustomerId,
                         principalTable: "Customers",
                         principalColumn: "CustomerId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Orders_Goods_GoodId1",
-                        column: x => x.GoodId1,
+                        name: "FK_Orders_Goods_GoodId",
+                        column: x => x.GoodId,
                         principalTable: "Goods",
                         principalColumn: "GoodId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Orders_SalesMen_SalesmanId1",
-                        column: x => x.SalesmanId1,
+                        name: "FK_Orders_SalesMen_SalesmanId",
+                        column: x => x.SalesmanId,
                         principalTable: "SalesMen",
                         principalColumn: "SalesmanId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Orders_CustomerId1",
+                name: "IX_Orders_CustomerId",
                 table: "Orders",
-                column: "CustomerId1");
+                column: "CustomerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Orders_GoodId1",
+                name: "IX_Orders_GoodId",
                 table: "Orders",
-                column: "GoodId1");
+                column: "GoodId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Orders_SalesmanId1",
+                name: "IX_Orders_SalesmanId",
                 table: "Orders",
-                column: "SalesmanId1");
+                column: "SalesmanId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

@@ -1,0 +1,18 @@
+﻿@using Session01.Domain.Entities.Orders
+@model IEnumerable<OrderDto>
+@{
+    ViewData["Title"] = "Orders";
+}
+<h2>@ViewData["Title"]</h2>
+
+@foreach (OrderDto order in Model)
+{
+    <p></p>
+    <h3>OrderId: @order.OrderId</h3>
+    <h5>Customer: @order.CustomerName</h5>
+    <h5>Salesman: @order.SalesmanName</h5>
+    <h5>Good: @order.GoodName</h5>
+    <h5>Unit Price: @order.Price</h5>
+    <h5>Total Price: @order.TotalPrice</h5>
+    <h5>Quantity: @order.Quantity</h5>
+}

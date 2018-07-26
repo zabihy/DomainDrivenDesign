@@ -8,7 +8,7 @@ using System.Text;
 
 namespace Session01.Data.EF.Goods
 {
-    class GoodRepository : BaseEfRepository, IGoodRepository
+    public class GoodRepository : BaseEfRepository, IGoodRepository
     {
         public GoodRepository(Session01DbContext ctx) : base(ctx)
         {

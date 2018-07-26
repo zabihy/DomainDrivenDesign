@@ -1,0 +1,13 @@
+﻿@using Session01.Domain.Entities.Salesmans
+@model IEnumerable<Salesman>
+@{
+    ViewData["Title"] = "Salesman";
+}
+<h2>@ViewData["Title"]</h2>
+
+@foreach (Salesman salesman in Model)
+{
+    <p></p>
+    <h3>SalesmanId: @salesman.SalesmanId</h3>
+    <h5>@salesman.FirstName&nbsp;@salesman.LastName</h5>
+}

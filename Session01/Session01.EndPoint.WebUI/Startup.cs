@@ -12,8 +12,14 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Session01.Data.EF.Common;
 using Session01.Data.EF.Customers;
+using Session01.Data.EF.Goods;
+using Session01.Data.EF.Orders;
+using Session01.Data.EF.Salesmans;
 using Session01.Domain.ApplicationServices.Customers.Query;
 using Session01.Domain.Contracts.Customers;
+using Session01.Domain.Contracts.Goods;
+using Session01.Domain.Contracts.Orders;
+using Session01.Domain.Contracts.Salesmans;
 
 namespace Session01.EndPoint.WebUI
 {
@@ -41,7 +47,14 @@ namespace Session01.EndPoint.WebUI
 
 
             services.AddScoped<ICustomerRepository, CustomerRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<ISalesmanRepository, SalesmanRepository>();
+            services.AddScoped<IGoodRepository, GoodRepository>();
+
             services.AddScoped<IGetAllCustomerQuery, GetAllCustomerQuery>();
+            services.AddScoped<IGetAllOrderQuery, GetAllOrderQuery>();
+            services.AddScoped<IGetAllSalesmanQuery, GetAllSalesmanQuery>();
+            services.AddScoped<IGetAllGoodQuery, GetAllGoodQuery>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

@@ -1,0 +1,13 @@
+﻿@using Session01.Domain.Entities.Goods
+@model IEnumerable<Good>
+@{
+    ViewData["Title"] = "Goods List";
+}
+<h2>@ViewData["Title"]</h2>
+
+@foreach (Good good in Model)
+{
+    <p></p>
+    <h3>GoodId: @good.GoodId</h3>
+    <h5>@good.Name</h5>
+}

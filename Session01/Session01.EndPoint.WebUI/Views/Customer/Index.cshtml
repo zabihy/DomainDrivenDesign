@@ -1,0 +1,13 @@
+﻿@using Session01.Domain.Entities.Customers
+@model IEnumerable<Customer>
+@{
+    ViewData["Title"] = "Customers";
+}
+<h2>@ViewData["Title"]</h2>
+
+@foreach (Customer customer in Model)
+{
+    <p></p>
+    <h3>CustomerId: @customer.CustomerId</h3>
+    <h5>@customer.FirstName&nbsp;@customer.LastName</h5>
+}
