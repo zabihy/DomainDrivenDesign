@@ -8,10 +8,15 @@ namespace Session01.Domain.ApplicationServices.Customers.Query
 {
     public class GetAllCustomerQuery : IGetAllCustomerQuery
     {
-        private readonly ICustomerRepository customerRepository;
+        private readonly ICustomerRepository _customerRepository;
+
+        public GetAllCustomerQuery(ICustomerRepository customerRepository)
+        {
+            _customerRepository = customerRepository;
+        }
         public List<Customer> Execute()
         {
-            return customerRepository.Customers();
+            return _customerRepository.Customers();
         }
     }
 }
